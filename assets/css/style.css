@@ -1,0 +1,429 @@
+/* =========================================================
+   Made by Ayu — estilos da estética de colagem / scrapbook
+   ========================================================= */
+
+/* ---------- Fontes locais (licença OFL — assets/fonts/OFL.txt) ---------- */
+@font-face { font-family: "Bricolage Grotesque"; src: url("../fonts/bricolage-grotesque.woff") format("woff"); font-weight: 200 800; font-display: swap; }
+@font-face { font-family: "DM Sans"; src: url("../fonts/dm-sans.woff") format("woff"); font-weight: 100 1000; font-display: swap; }
+@font-face { font-family: "Caveat"; src: url("../fonts/caveat.woff") format("woff"); font-weight: 400 700; font-display: swap; }
+
+/* ---------- Página: tema claro fixo (estética de papel) ---------- */
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+body { font-family: "DM Sans", system-ui, sans-serif; color: #1C2B2A; }
+
+/* Barra do topo e botão "voltar ao topo" respeitam o entalhe/barras do celular */
+#topo { padding-top: calc(12px + env(safe-area-inset-top, 0px)); }
+#btnTopo {
+  right: calc(20px + env(safe-area-inset-right, 0px));
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+}
+
+/* ---------- Nada pode "vazar" para os lados no celular ---------- */
+html, body { max-width: 100%; overflow-x: hidden; }
+@supports (overflow: clip) { html, body { overflow-x: clip; } }
+img { max-width: 100%; }
+
+/* ---------- Textura de papel no fundo ---------- */
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #FBF4E2;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.35 0 0 0 0 0.2 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Folha quadriculada de caderno */
+.quadriculado {
+  background-image:
+    linear-gradient(rgba(14,140,133,.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,140,133,.12) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* Folha pautada */
+.pautado {
+  background-image: repeating-linear-gradient(to bottom, transparent 0 31px, rgba(14,140,133,.18) 31px 32px);
+}
+
+/* ---------- Fita adesiva (washi tape) ---------- */
+.fita {
+  position: absolute;
+  width: 96px;
+  height: 28px;
+  background: rgba(249, 210, 90, .78);
+  box-shadow: 0 1px 2px rgba(0,0,0,.08);
+  clip-path: polygon(3% 0, 97% 4%, 100% 50%, 96% 100%, 2% 96%, 0 50%);
+  z-index: 5;
+}
+.fita.tq { background: rgba(46, 196, 186, .65); }
+.fita.listrada {
+  background: repeating-linear-gradient(45deg, rgba(255,138,115,.75) 0 8px, rgba(255,253,246,.8) 8px 16px);
+}
+
+/* ---------- Bordas de papel rasgado ---------- */
+.rasgado-baixo {
+  clip-path: polygon(0 0,100% 0,100% calc(100% - 14px),95% 100%,90% calc(100% - 10px),84% 100%,78% calc(100% - 12px),71% 100%,64% calc(100% - 8px),57% 100%,50% calc(100% - 13px),43% 100%,36% calc(100% - 9px),29% 100%,22% calc(100% - 12px),15% 100%,8% calc(100% - 10px),0 100%);
+}
+.rasgado-cima {
+  clip-path: polygon(0 14px,6% 0,13% 10px,20% 1px,27% 12px,34% 2px,41% 9px,48% 0,55% 12px,62% 3px,69% 11px,76% 0,83% 10px,90% 2px,96% 12px,100% 4px,100% 100%,0 100%);
+}
+
+/* ---------- Estrelas e elementos flutuantes ---------- */
+.flutua   { animation: flutua 6s ease-in-out infinite; }
+.flutua-2 { animation: flutua 7.5s ease-in-out infinite reverse; }
+@keyframes flutua {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50%      { transform: translateY(-10px) rotate(calc(var(--r, 0deg) + 8deg)); }
+}
+
+.gira-lento { animation: gira 22s linear infinite; }
+@keyframes gira { to { transform: rotate(360deg); } }
+
+/* Logo do topo: leve "balanço" de adesivo no hover */
+.logo-adesivo { transition: transform .35s cubic-bezier(.2,.8,.3,1.4); }
+.logo-adesivo:hover { transform: rotate(-8deg) scale(1.06); }
+
+/* ---------- Marca-texto ---------- */
+.marca-texto {
+  background: linear-gradient(transparent 55%, #FCE184 55%, #FCE184 90%, transparent 90%);
+  padding: 0 .15em;
+}
+
+/* ---------- Entrada dos cards ao filtrar ---------- */
+.card-enter { animation: cardIn .5s cubic-bezier(.2,.8,.3,1.2) both; }
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(18px) rotate(-3deg) scale(.96); }
+}
+
+/* ---------- Revelar seções ao rolar ---------- */
+/* Seções sempre visíveis; ao entrar na tela só "assentam" levemente */
+.reveal { transform: translateY(14px); transition: transform .7s ease; }
+.reveal.visivel { transform: none; }
+
+/* ---------- Letreiro rolante ---------- */
+.letreiro { animation: letreiro 28s linear infinite; }
+@keyframes letreiro { to { transform: translateX(-50%); } }
+
+/* ---------- Abas com rolagem horizontal no mobile ---------- */
+.abas::-webkit-scrollbar { display: none; }
+.abas { scrollbar-width: none; }
+
+
+/* =========================================================
+   HERO — papel de caderno, selo giratório e fitas washi
+   ========================================================= */
+
+/* Fundo de papel: pontilhado + quadriculado bem sutil + manchas de luz */
+.papel-hero {
+  background-color: #FFFBEA;
+  background-image:
+    radial-gradient(circle at 18% 22%, rgba(252,225,132,.45), transparent 38%),
+    radial-gradient(circle at 85% 70%, rgba(46,196,186,.18), transparent 40%),
+    radial-gradient(rgba(28,43,42,.16) 1.2px, transparent 1.3px),
+    linear-gradient(rgba(14,140,133,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,140,133,.07) 1px, transparent 1px);
+  background-size: auto, auto, 22px 22px, 44px 44px, 44px 44px;
+}
+
+/* 🎡 Logo girando como selo/carimbo */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.selo-gira {
+  animation: spin 20s linear infinite;
+  will-change: transform;
+}
+/* Pausa o giro ao passar o mouse (detalhe interativo) */
+.selo:hover .selo-gira { animation-play-state: paused; }
+.selo { transition: transform .35s cubic-bezier(.2,.8,.3,1.4); }
+.selo:hover { transform: scale(1.06) rotate(-6deg); }
+
+/* 📸 COLAGEM DA FOTO — tamanhos travados (não dependem do Tailwind) */
+.hero-colagem {
+  position: relative;
+  width: min(260px, 70vw);     /* celular: no máximo 260px */
+  margin: 8px auto 12px;
+}
+@media (min-width: 640px)  { .hero-colagem { width: 320px; } }
+@media (min-width: 1024px) { .hero-colagem { width: 360px; margin: 0 auto; } }
+
+/* papéis coloridos desalinhados atrás da foto */
+.hero-fundo {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #1C2B2A;
+}
+.hero-fundo-turquesa { background: #2EC4BA; transform: rotate(-7deg) translate(10px, 6px); box-shadow: 5px 5px 0 #000; }
+.hero-fundo-amarelo  { background-color: #FCE184; transform: rotate(4deg) translate(-8px, 0); box-shadow: 5px 5px 0 #083D3B; }
+
+/* polaroid: fundo branco, borda fina escura, margem maior embaixo */
+.polaroid {
+  position: relative;
+  margin: 0;
+  padding: 10px 10px 48px;
+  background: #fff;
+  border: 2px solid #1C2B2A;
+  box-shadow: 6px 6px 0 #000;
+  transform: rotate(-2deg);
+  transition: transform .5s ease;
+}
+.polaroid:hover { transform: rotate(0deg); }
+.polaroid-foto {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 28%;
+  border: 1.5px solid #1C2B2A;
+  background: #C5EEEB;
+}
+.polaroid-legenda {
+  position: absolute;
+  left: 0; right: 0; bottom: 8px;
+  text-align: center;
+  font-family: Caveat, cursive;
+  font-size: 1.65rem;
+  line-height: 1.2;
+  color: #1C2B2A;
+}
+.polaroid-fita { top: -14px; left: 50%; width: 96px; height: 28px; transform: translateX(-50%) rotate(-4deg); }
+
+/* logo girando, pequena, sobre o canto da polaroid */
+.hero-selo {
+  position: absolute;
+  z-index: 20;
+  top: -26px;
+  right: -26px;
+  width: 80px;
+  height: 80px;
+}
+.hero-selo::before {            /* "papelão" preto atrás do selo */
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: #000;
+  transform: translate(4px, 4px);
+}
+.hero-selo img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+@media (min-width: 640px) { .hero-selo { width: 96px; height: 96px; top: -32px; right: -32px; } }
+
+/* adesivos pequenos nas bordas */
+.hero-adesivo {
+  position: absolute;
+  z-index: 10;
+  padding: 4px 10px;
+  border: 2px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.hero-adesivo-mao   { top: 38%; left: -14px; transform: rotate(-12deg); background: #FF8A73; border-radius: 999px; }
+.hero-adesivo-video { bottom: -22px; right: -12px; transform: rotate(5deg); background: #2EC4BA; text-transform: uppercase; font-size: 11px; }
+
+/* ✂️ Fita adesiva semitransparente (washi tape) */
+.washi {
+  position: absolute;
+  z-index: 15;
+  width: 120px;
+  height: 34px;
+  opacity: .85;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12);
+  /* pontas serrilhadas como fita rasgada à mão */
+  clip-path: polygon(0 8%, 4% 0, 8% 10%, 12% 0, 88% 0, 92% 10%, 96% 0, 100% 8%,
+                     100% 92%, 96% 100%, 92% 90%, 88% 100%, 12% 100%, 8% 90%, 4% 100%, 0 92%);
+  mix-blend-mode: multiply;
+}
+.washi-amarela  { background: rgba(249, 210, 90, .85); }
+.washi-turquesa { background: rgba(46, 196, 186, .7); }
+.washi-listrada {
+  background: repeating-linear-gradient(45deg, rgba(255,138,115,.85) 0 7px, rgba(255,253,246,.9) 7px 14px);
+}
+
+/* =========================================================
+   CARROSSÉIS (posts estilo Instagram)
+   ========================================================= */
+.car-trilho {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scroll-behavior: smooth;
+}
+.car-trilho::-webkit-scrollbar { display: none; }
+.car-trilho:focus-visible { outline: 3px solid #2EC4BA; outline-offset: -3px; }
+.car-trilho img { user-select: none; -webkit-user-drag: none; }
+
+/* =========================================================
+   MESA DO CLIENTE — Clube do Livro (vinho amassado + jornal)
+   ========================================================= */
+.mesa-clube {
+  position: relative;
+  background-color: #7E1426;
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(255,255,255,.10), transparent 45%),
+    radial-gradient(ellipse at 80% 60%, rgba(0,0,0,.22), transparent 50%),
+    repeating-linear-gradient(115deg, rgba(255,255,255,.035) 0 2px, transparent 2px 9px),
+    repeating-linear-gradient(25deg, rgba(0,0,0,.05) 0 1px, transparent 1px 13px);
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+@media (min-width: 640px) {
+  .mesa-clube { border: 3px solid #000; box-shadow: 12px 12px 0 #1C2B2A; }
+}
+/* faixas listradas nos cantos, como nos posts do clube */
+.mesa-clube::before, .mesa-clube::after {
+  content: ""; position: absolute; width: 140px; height: 26px; pointer-events: none;
+  background: repeating-linear-gradient(90deg, #F1E4C8 0 10px, #8A1328 10px 20px);
+  border: 2px solid #000;
+}
+.mesa-clube::before { top: 26px; left: -36px; transform: rotate(-35deg); }
+.mesa-clube::after  { bottom: 26px; right: -36px; transform: rotate(-35deg); }
+.mesa-clube { overflow: hidden; }
+
+/* =========================================================
+   MESA DO CLIENTE — Teacher Jess (caderno azul-marinho)
+   ========================================================= */
+.mesa-teacher {
+  position: relative;
+  overflow: hidden;
+  background-color: #090B3C;
+  background-image:
+    linear-gradient(90deg, transparent 46px, rgba(186,0,7,.75) 46px, rgba(186,0,7,.75) 49px, transparent 49px),
+    linear-gradient(rgba(250,247,236,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250,247,236,.07) 1px, transparent 1px),
+    radial-gradient(ellipse at 80% 15%, rgba(255,255,255,.08), transparent 45%);
+  background-size: auto, 28px 28px, 28px 28px, auto;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+@media (min-width: 640px) {
+  .mesa-teacher { border: 3px solid #000; box-shadow: 12px 12px 0 #BA0007; }
+}
+/* estrelas vermelhas nos cantos, como nos posts da Jess */
+.mesa-teacher::before, .mesa-teacher::after {
+  content: "★"; position: absolute; pointer-events: none;
+  color: #BA0007; font-size: 64px; line-height: 1; text-shadow: 3px 3px 0 #000;
+}
+.mesa-teacher::before { top: 14px; right: 18px; transform: rotate(14deg); }
+.mesa-teacher::after  { bottom: 18px; left: 60px; transform: rotate(-12deg); font-size: 44px; }
+
+/* =========================================================
+   MESA DO CLIENTE — Tabi Nakazato (rosa com brilhos)
+   ========================================================= */
+.mesa-tabi {
+  position: relative;
+  overflow: hidden;
+  background-color: #F2BDBD;
+  background-image:
+    radial-gradient(rgba(255,255,255,.55) 2px, transparent 2.5px),
+    radial-gradient(ellipse at 15% 10%, rgba(255,255,255,.45), transparent 45%),
+    radial-gradient(ellipse at 90% 85%, rgba(229,138,181,.45), transparent 50%);
+  background-size: 22px 22px, auto, auto;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+@media (min-width: 640px) {
+  .mesa-tabi { border: 3px solid #000; box-shadow: 12px 12px 0 #8E5C93; }
+}
+/* brilhos amarelos como nas thumbnails */
+.mesa-tabi::before, .mesa-tabi::after {
+  content: "✦"; position: absolute; pointer-events: none;
+  color: #FBE38A; line-height: 1; text-shadow: 2px 2px 0 #8E5C93;
+}
+.mesa-tabi::before { top: 12px; right: 20px; font-size: 58px; }
+.mesa-tabi::after  { bottom: 16px; left: 18px; font-size: 42px; }
+
+/* =========================================================
+   MESA DO CLIENTE — @made.by._ayu (turquesa com estrelas amarelas)
+   ========================================================= */
+.mesa-ayu {
+  position: relative;
+  overflow: hidden;
+  background-color: #4FC8CF;
+  background-image:
+    linear-gradient(rgba(255,250,232,.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,250,232,.18) 1px, transparent 1px),
+    radial-gradient(ellipse at 85% 10%, rgba(255,255,255,.35), transparent 45%);
+  background-size: 30px 30px, 30px 30px, auto;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+@media (min-width: 640px) {
+  .mesa-ayu { border: 3px solid #000; box-shadow: 12px 12px 0 #FFED00; }
+}
+.mesa-ayu::before, .mesa-ayu::after {
+  content: "★"; position: absolute; pointer-events: none;
+  color: #FFED00; line-height: 1; text-shadow: 3px 3px 0 #1C2B2A;
+}
+.mesa-ayu::before { top: 10px; right: 16px; font-size: 70px; transform: rotate(12deg); }
+.mesa-ayu::after  { bottom: 14px; left: 16px; font-size: 48px; transform: rotate(-14deg); }
+
+/* =========================================================
+   MESA — Logotipos (quadro de cortiça com tachinhas)
+   ========================================================= */
+.mesa-logos {
+  position: relative;
+  overflow: hidden;
+  background-color: #C99E6B;
+  background-image:
+    radial-gradient(rgba(92,58,30,.35) 1px, transparent 1.6px),
+    radial-gradient(rgba(255,240,210,.35) 1px, transparent 1.6px),
+    radial-gradient(ellipse at 20% 15%, rgba(255,240,210,.35), transparent 50%);
+  background-size: 9px 9px, 13px 13px, auto;
+  background-position: 0 0, 4px 6px, 0 0;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+@media (min-width: 640px) {
+  .mesa-logos { border: 10px solid #8A5A2B; outline: 3px solid #000; outline-offset: -3px; box-shadow: 12px 12px 0 #1C2B2A; }
+}
+/* tachinhas nos cantos */
+.mesa-logos::before, .mesa-logos::after {
+  content: ""; position: absolute; width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid #000; box-shadow: 2px 3px 0 rgba(0,0,0,.45); pointer-events: none;
+}
+.mesa-logos::before { top: 14px; left: 16px; background: radial-gradient(circle at 35% 35%, #fff 0 18%, #2EC4BA 20%); }
+.mesa-logos::after  { top: 14px; right: 16px; background: radial-gradient(circle at 35% 35%, #fff 0 18%, #FF8A73 20%); }
+
+/* Carimbo de borracha */
+.carimbo {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 3px double #8A1328;
+  border-radius: 6px;
+  color: #8A1328;
+  background: rgba(255,253,246,.85);
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  z-index: 6;
+}
+
+/* Dica "arraste" balançando no primeiro carrossel */
+.dica-arraste { animation: cutucar 1.6s ease-in-out infinite; }
+@keyframes cutucar {
+  0%, 100% { transform: translateX(-50%); }
+  50%      { transform: translateX(calc(-50% + 10px)); }
+}
+
+/* ---------- Acessibilidade: menos movimento ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, .reveal {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+  }
+}
