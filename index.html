@@ -347,37 +347,36 @@
     <section id="contato" class="reveal relative py-20 sm:py-28">
       <svg class="flutua absolute right-[10%] top-14 h-10 w-10 fill-creme-400" style="--r:20deg"><use href="#estrela"/></svg>
 
-      <div class="mx-auto grid max-w-6xl gap-14 px-4 sm:px-6 lg:grid-cols-2">
-        <div>
+      <div class="contato-wrap">
+        <div class="contato-topo">
           <p class="font-mao text-3xl text-turquesa-700">psiu, vem cá ↓</p>
           <h2 class="mt-2 font-display text-4xl font-extrabold leading-tight sm:text-5xl">
             Vamos criar algo <span class="marca-texto">juntas</span>?
           </h2>
-          <p class="mt-4 max-w-md text-lg text-tinta/80">Me conta sobre sua marca ou ideia de projeto. Respondo em até 2 dias úteis.</p>
+          <p class="contato-sub">Me conta sobre sua marca ou ideia de projeto. Respondo em até 2 dias úteis.</p>
+        </div>
 
-          <div class="mt-8 grid max-w-sm gap-4">
-            <!-- E-MAIL: troque aqui quando tiver o e-mail profissional -->
-            <div class="flex -rotate-1 items-center gap-3 border-2 border-tinta bg-white p-3 shadow-duro-sm transition-all hover:rotate-0 hover:shadow-duro">
-              <a href="mailto:madebyayu22@gmail.com" aria-label="Enviar e-mail" class="grid h-10 w-10 shrink-0 place-items-center rounded-lg border-2 border-tinta bg-creme-300"><i data-lucide="mail" class="h-5 w-5"></i></a>
-              <span id="emailTexto" class="min-w-0 flex-1 select-all text-[15px] font-bold [overflow-wrap:anywhere] sm:text-base">madebyayu22@gmail.com</span>
-              <button type="button" id="btnCopiarEmail" class="shrink-0 rounded-full border-2 border-tinta bg-turquesa-300 px-3 py-1 text-xs font-bold shadow-duro-sm transition-all hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-none">copiar</button>
-            </div>
-            <a href="https://instagram.com/made.by._ayu" target="_blank" rel="noopener" class="flex rotate-1 items-center gap-3 border-2 border-tinta bg-white p-3 shadow-duro-sm transition-all hover:rotate-0 hover:shadow-duro">
-              <span class="grid h-10 w-10 place-items-center rounded-lg border-2 border-tinta bg-turquesa-300"><i data-lucide="instagram" class="h-5 w-5"></i></span>
-              <span class="font-bold">@made.by._ayu</span>
-            </a>
-            <!-- WHATSAPP -->
-            <a href="https://wa.me/819063301274" target="_blank" rel="noopener" class="flex -rotate-1 items-center gap-3 border-2 border-tinta bg-white p-3 shadow-duro-sm transition-all hover:rotate-0 hover:shadow-duro">
-              <span class="grid h-10 w-10 place-items-center rounded-lg border-2 border-tinta bg-coral"><i data-lucide="message-circle" class="h-5 w-5"></i></span>
-              <span class="font-bold">WhatsApp · +81 90-6330-1274</span>
-            </a>
+        <!-- Redes e contatos, lado a lado -->
+        <div class="contato-cartoes">
+          <div class="contato-cartao contato-gira-1">
+            <a href="mailto:madebyayu22@gmail.com" aria-label="Enviar e-mail" class="contato-icone bg-creme-300"><i data-lucide="mail" class="h-5 w-5"></i></a>
+            <span id="emailTexto" class="contato-texto select-all">madebyayu22@gmail.com</span>
+            <button type="button" id="btnCopiarEmail" class="contato-copiar">copiar</button>
           </div>
+          <a href="https://instagram.com/made.by._ayu" target="_blank" rel="noopener" class="contato-cartao contato-gira-2">
+            <span class="contato-icone bg-turquesa-300"><i data-lucide="instagram" class="h-5 w-5"></i></span>
+            <span class="contato-texto">@made.by._ayu</span>
+          </a>
+          <a href="https://wa.me/819063301274" target="_blank" rel="noopener" class="contato-cartao contato-gira-3">
+            <span class="contato-icone bg-coral"><i data-lucide="message-circle" class="h-5 w-5"></i></span>
+            <span class="contato-texto">WhatsApp · +81 90-6330-1274</span>
+          </a>
+        </div>
 
-          <div class="mt-8 flex gap-3">
-            <a href="https://instagram.com/made.by._ayu" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-12 w-12 place-items-center rounded-full border-2 border-tinta bg-white shadow-duro-sm transition-all hover:-translate-y-1 hover:rotate-6 hover:bg-turquesa-300"><i data-lucide="instagram" class="h-5 w-5"></i></a>
-            <a href="https://wa.me/819063301274" target="_blank" rel="noopener" aria-label="WhatsApp" class="grid h-12 w-12 place-items-center rounded-full border-2 border-tinta bg-white shadow-duro-sm transition-all hover:-translate-y-1 hover:rotate-6 hover:bg-turquesa-200"><i data-lucide="message-circle" class="h-5 w-5"></i></a>
-            <a href="#" aria-label="Pinterest" class="grid h-12 w-12 place-items-center rounded-full border-2 border-tinta bg-white shadow-duro-sm transition-all hover:-translate-y-1 hover:-rotate-6 hover:bg-turquesa-200"><i data-lucide="pin" class="h-5 w-5"></i></a>
-          </div>
+        <div class="contato-redondos">
+          <a href="https://instagram.com/made.by._ayu" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-12 w-12 place-items-center rounded-full border-2 border-tinta bg-white shadow-duro-sm transition-all hover:-translate-y-1 hover:rotate-6 hover:bg-turquesa-300"><i data-lucide="instagram" class="h-5 w-5"></i></a>
+          <a href="https://wa.me/819063301274" target="_blank" rel="noopener" aria-label="WhatsApp" class="grid h-12 w-12 place-items-center rounded-full border-2 border-tinta bg-white shadow-duro-sm transition-all hover:-translate-y-1 hover:rotate-6 hover:bg-turquesa-200"><i data-lucide="message-circle" class="h-5 w-5"></i></a>
+          <a href="#" aria-label="Pinterest" class="grid h-12 w-12 place-items-center rounded-full border-2 border-tinta bg-white shadow-duro-sm transition-all hover:-translate-y-1 hover:-rotate-6 hover:bg-turquesa-200"><i data-lucide="pin" class="h-5 w-5"></i></a>
         </div>
 
         <!-- Convite para o briefing completo (colagem, no estilo do topo do site) -->
