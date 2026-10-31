@@ -317,7 +317,7 @@ const perfis = {
   jana: {
     handle: 'vet.janainabez', nomeCurto: 'JANA Vet',
     nome: 'JANA • veterinária em domicílio em São Paulo',
-    avatar: `${PASTA}/jana-vet/avatar-jana.jpg`,
+    avatar: `${PASTA}/jana-vet/logo-jana-verde.jpg`,
     bio: 'Cuidado com jeito de quem é de casa: atendimento completo, calmo e carinhoso para cães e gatos, até a porta de casa.',
     link: 'https://instagram.com/vet.janainabez',
     fiz: ['Identidade visual completa', 'Logotipo', 'Manual da marca', 'Stickers'],
