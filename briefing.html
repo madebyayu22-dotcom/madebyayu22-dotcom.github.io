@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Briefing · Made by Ayu</title>
+  <meta name="description" content="Vamos criar sua marca? Responda o briefing da Made by Ayu e dê o primeiro passo para a sua identidade visual." />
+  <link rel="stylesheet" href="assets/css/tailwind.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/briefing.css" />
+  <link rel="icon" type="image/png" href="assets/images/logo-made-by-ayu.png" />
+</head>
+<body class="papel-hero">
+<!-- Molde reutilizável de estrela retrô -->
+  <svg width="0" height="0" class="absolute" aria-hidden="true">
+    <symbol id="estrela" viewBox="0 0 24 24"><path d="M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z"/></symbol>
+  </svg>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header id="topo" class="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6">
+    <!-- Grade em 3 colunas: a marca fica sempre no centro -->
+    <nav class="mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-2 rounded-2xl border-2 border-tinta bg-creme-50 px-3 py-3 shadow-duro-sm sm:px-4">
+
+      <!-- Esquerda: links (computador) / espaço vazio que equilibra o botão (celular) -->
+      <div class="justify-self-start">
+        <span class="block h-9 w-9 lg:hidden" aria-hidden="true"></span>
+        <ul class="hidden items-center gap-1 text-sm font-bold lg:flex">
+          <li><a href="index.html#portfolio" class="rounded-full px-4 py-2 transition hover:bg-creme-300">Portfólio</a></li>
+          <li><a href="index.html#processo" class="rounded-full px-4 py-2 transition hover:bg-creme-300">Processo</a></li>
+          <li><a href="briefing.html" class="rounded-full px-4 py-2 transition hover:bg-creme-300">Briefing</a></li>
+        </ul>
+      </div>
+
+      <!-- Centro: MARCA EM TEXTO, primeira coisa escrita no site -->
+      <a href="index.html#inicio" class="group flex items-center justify-center gap-1.5 whitespace-nowrap font-display text-lg font-extrabold uppercase tracking-tight sm:text-2xl" aria-label="Made by Ayu — início">
+        <svg class="h-3.5 w-3.5 fill-turquesa-500 transition-transform group-hover:-rotate-45" aria-hidden="true"><use href="#estrela"/></svg>
+        <span>Made by</span>
+        <span class="inline-block -rotate-3 border-[3px] border-black bg-turquesa-400 px-2 leading-tight shadow-[3px_3px_0_#000] transition-transform group-hover:rotate-2">Ayu</span>
+        <svg class="h-3.5 w-3.5 fill-creme-400 transition-transform group-hover:rotate-45" aria-hidden="true"><use href="#estrela"/></svg>
+      </a>
+
+      <!-- Direita: links + CTA (computador) / botão de menu (celular) -->
+      <div class="justify-self-end">
+        <ul class="hidden items-center gap-1 text-sm font-bold lg:flex">
+          <li class="ml-1">
+            <a href="index.html#contato" class="inline-block rounded-full border-2 border-tinta bg-turquesa-400 px-5 py-2 shadow-duro-sm transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-duro active:translate-x-0.5 active:translate-y-0.5 active:shadow-none">
+              Fale comigo ✦
+            </a>
+          </li>
+        </ul>
+        <button id="btnMenu" class="grid h-9 w-9 place-items-center rounded-lg border-2 border-tinta bg-creme-300 shadow-duro-sm lg:hidden" aria-label="Abrir menu" aria-expanded="false">
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div id="menuMobile" class="mx-auto mt-2 hidden max-w-6xl rounded-2xl border-2 border-tinta bg-creme-50 p-3 shadow-duro lg:hidden">
+      <ul class="grid gap-1 font-display text-lg font-bold">
+        <li><a href="index.html#portfolio" class="block rounded-xl px-3 py-2.5 hover:bg-creme-200">Portfólio</a></li>
+        <li><a href="index.html#processo" class="block rounded-xl px-3 py-2.5 hover:bg-creme-200">Processo</a></li>
+        <li><a href="briefing.html" class="block rounded-xl px-3 py-2.5 hover:bg-creme-200">Briefing completo ✎</a></li>
+        <li><a href="index.html#contato" class="mt-1 block rounded-xl border-2 border-tinta bg-turquesa-400 px-3 py-2.5 text-center">Fale comigo ✦</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="bf-wrap">
+    <!-- Capa do briefing -->
+    <div class="bf-capa">
+      <span class="washi washi-amarela" aria-hidden="true"></span>
+      <div class="bf-selo selo" aria-hidden="true"><img class="selo-gira" src="assets/images/logo-made-by-ayu.png" alt="" /></div>
+      <span class="bf-etiqueta">✂ briefing · made by ayu</span>
+      <h1 class="bf-titulo">Vamos criar <span class="destaque">sua marca</span>?</h1>
+      <p class="bf-intro">Oi! Que bom ter você por aqui ♡ Este formulário é o primeiro passo para a gente se conhecer.
+        Não existe resposta certa ou errada: escreva do seu jeito, e o que ainda não estiver claro a gente descobre juntas na reunião.</p>
+      <p class="bf-recado" style="margin-top:18px">✦ como funciona meu processo</p>
+      <ol class="bf-processo" style="padding:0;margin-bottom:0">
+        <li><b>Briefing & reunião</b>Você responde aqui e a gente conversa numa reunião online.</li>
+        <li><b>Proposta & moodboard</b>Envio a proposta e montamos juntas a direção visual.</li>
+        <li><b>Criação & entrega</b>Crio a identidade com você e entrego todos os arquivos prontos.</li>
+      </ol>
+      <p class="bf-tempo"><i data-lucide="calendar" class="h-4 w-4"></i> leva em média 8 a 10 minutos</p>
+    </div>
+
+    <!-- Progresso -->
+    <div class="bf-progresso" id="bfProgresso">
+      <div class="bf-progresso-topo">
+        <span class="bf-progresso-nome" id="bfNomeEtapa"></span>
+        <span class="bf-progresso-num" id="bfNum"></span>
+      </div>
+      <div class="bf-trilho"><div class="bf-barra" id="bfBarra"></div></div>
+    </div>
+
+    <!-- Folha do formulário -->
+    <form id="formBriefing" class="bf-folha" novalidate>
+      <span class="fita tq" aria-hidden="true"></span>
+      <div id="bfEtapas"></div>
+
+      <div class="bf-botoes" id="bfBotoes">
+        <button type="button" class="bf-btn secundario" id="bfVoltar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Voltar
+        </button>
+        <button type="submit" class="bf-btn primario" id="bfAvancar">Próxima etapa</button>
+      </div>
+      <p class="bf-erro-envio" id="bfErroEnvio" role="alert">Ops, não consegui enviar agora. Confere sua internet e tenta de novo — ou me chama no WhatsApp ♡</p>
+
+      <div class="bf-sucesso" id="bfSucesso" role="status">
+        <svg class="estrela" aria-hidden="true"><use href="#estrela"/></svg>
+        <h2>Recebi suas respostas!</h2>
+        <p class="bf-recado">obrigada pelo carinho ♡</p>
+        <p>Vou ler tudo com atenção e te chamo em até 2 dias úteis para marcarmos nossa reunião de alinhamento.
+          Enquanto isso, me acompanhe no Instagram: <a href="https://instagram.com/made.by._ayu" target="_blank" rel="noopener" style="font-weight:800;text-decoration:underline">@made.by._ayu</a></p>
+        <p style="margin-top:22px"><a href="index.html" class="bf-btn secundario">Voltar para o site</a></p>
+      </div>
+    </form>
+  </main>
+
+  <footer class="rasgado-cima bg-tinta pb-8 pt-12 text-sm text-creme-100">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6">
+      <p class="flex items-center gap-3">
+        <img src="assets/images/logo-made-by-ayu.png" alt="" class="h-10 w-10" width="40" height="40" />
+        <span>© 2026 Made by Ayu — feito com cola, tesoura e código.</span>
+      </p>
+      <a href="https://instagram.com/made.by._ayu" target="_blank" rel="noopener" class="inline-flex items-center gap-2 opacity-75 transition hover:text-turquesa-300 hover:opacity-100">
+        <i data-lucide="instagram" class="h-4 w-4"></i> @made.by._ayu
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/icones.js"></script>
+  <script src="assets/js/briefing.js"></script>
+</body>
+</html>
