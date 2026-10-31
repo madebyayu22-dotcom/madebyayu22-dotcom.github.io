@@ -16,6 +16,8 @@ const categorias = [
     nota: 'Conteúdo para a @teacherjessmorais: inglês com cultura pop e posts para datas comemorativas. Arraste cada post e role para ver mais!' },
   { id: 'tabi',       nome: 'Tabi Nakazato',             icone: 'droplets',     cor: 'bg-pink-200',
     nota: 'Identidade visual completa e thumbnails para o canal de skincare da Tabi Nakazato.' },
+  { id: 'jana',       nome: 'JANA Vet',                  icone: 'paw-print',    cor: 'bg-jana',
+    nota: 'Identidade visual completa da JANA, veterinária em domicílio: logo, manual da marca e stickers dos pacientes ♡' },
   { id: 'ayu',        nome: '@made.by._ayu',             icone: 'instagram',    cor: 'bg-creme-300',
     nota: 'Meu próprio Instagram: posts em que eu conto quem sou e mostro como posso ajudar a sua marca ✦' },
   { id: 'identidade', nome: 'Identidade Visual & Logos', icone: 'pen-tool',     cor: 'bg-turquesa-400',
@@ -95,6 +97,26 @@ const projetos = [
     titulo: 'Rotina de Skincare: antes e depois',
     desc: 'Thumbnail de resultado com recortes circulares de antes e depois e anotações à mão.',
     tags: ['Thumbnail', 'Antes e depois', 'Letra de mão'], icone: 'flower-2', fundo: 'bg-pink-200' },
+
+  // 🐾 JANA Vet → assets/images/portfolio/jana-vet/<pasta>/01.jpg…
+  { cat: 'jana', carrossel: true, prancha: true, aspecto: 'aspect-video', pasta: 'manual', total: 16,
+    cliente: 'JANA · Veterinária em domicílio', rotuloCard: 'Manual de identidade · 16 páginas',
+    bastidor: 'A JANA nasceu de uma ideia simples: o melhor lugar para cuidar de um bicho é a casa dele. Montei o manual inteiro em volta dessa promessa: posicionamento, missão, público, tom de voz, paleta verde e azul, as três fontes e como tudo aparece no feed.',
+    titulo: 'Manual de identidade visual',
+    desc: 'Ideia da marca, posicionamento, tom de voz, cores, tipografia, versões do logo e aplicação no feed.',
+    tags: ['Identidade visual', 'Manual da marca', 'Posicionamento'], icone: 'book-open', fundo: 'bg-jana' },
+  { cat: 'jana', carrossel: true, prancha: true, aspecto: 'aspect-video', pasta: 'logos', total: 6,
+    cliente: 'Logo JANA e variações', rotuloCard: 'Logotipo · 6 versões',
+    bastidor: 'Cada detalhe conta uma parte da história: o telhado é o lar, o coração com brilhos é o afeto, a patinha no “A” são os pacientes de quatro patas e o gatinho lembra os gatos, que são os que mais sofrem com o transporte. O “A” com o gatinho virou o ícone para avatar e favicon.',
+    titulo: 'Logotipo, versões e ícone',
+    desc: 'Logo principal, versões em creme e azul névoa, marca sem slogan e o ícone do gatinho.',
+    tags: ['Logotipo', 'Ícone', 'Variações de cor'], icone: 'heart', fundo: 'bg-jana' },
+  { cat: 'jana', carrossel: true, prancha: true, aspecto: 'aspect-square', pasta: 'stickers', total: 7,
+    cliente: 'Stickers dos pacientes', rotuloCard: 'Stickers · 6 personagens',
+    bastidor: 'Criei seis bichinhos com os nomes mais brasileiros que existem: Caramelo, Fiapo de Manga, Frajola, Laranjinha, Pretinho e Salsicha. Os aros alternam o verde oliva e o azul ardósia da marca, e o @ da JANA em volta faz cada sticker virar divulgação na geladeira do tutor.',
+    titulo: 'Stickers: Caramelo, Frajola & cia.',
+    desc: 'Cartela de adesivos redondos com cães e gatos ilustrados nas cores da marca.',
+    tags: ['Stickers', 'Ilustração', 'Brinde'], icone: 'paw-print', fundo: 'bg-jana' },
 
   // ✦ Meu Instagram → assets/images/portfolio/made-by-ayu/<carrossel>/01.jpg…
   { cat: 'ayu', carrossel: true, pasta: 'por-que-designer', total: 4,
@@ -237,7 +259,7 @@ function capaProjeto(p) {
 
 /* Pasta de cada categoria dentro de assets/images/portfolio/ */
 const pastaCategoria = {
-  clube: 'clube-do-livro', teacher: 'teacher-jess', tabi: 'tabi-skin-care', ayu: 'made-by-ayu',
+  clube: 'clube-do-livro', teacher: 'teacher-jess', tabi: 'tabi-skin-care', jana: 'jana-vet', ayu: 'made-by-ayu',
   identidade: 'logotipos', video: 'videos',
 };
 
@@ -292,6 +314,23 @@ const perfis = {
     numero: '03', legenda: 'tabi nakazato', unidade: 'trabalhos',
     pasta: '#FFF4F7', tinta: '#8E5C93', botao: '#E58AB5', botaoTexto: '#FFFFFF',
   },
+  jana: {
+    handle: 'vet.janainabez', nomeCurto: 'JANA Vet',
+    nome: 'JANA • veterinária em domicílio em São Paulo',
+    avatar: `${PASTA}/jana-vet/avatar-jana.jpg`,
+    bio: 'Cuidado com jeito de quem é de casa: atendimento completo, calmo e carinhoso para cães e gatos, até a porta de casa.',
+    link: 'https://instagram.com/vet.janainabez',
+    fiz: ['Identidade visual completa', 'Logotipo', 'Manual da marca', 'Stickers'],
+    paleta: [
+      { nome: 'oliva', hex: '#5E6B45' }, { nome: 'sálvia', hex: '#A3AE8B' },
+      { nome: 'ardósia', hex: '#4C6A85' }, { nome: 'névoa', hex: '#B9C8D4' },
+      { nome: 'creme', hex: '#F3ECDC' }, { nome: 'floresta', hex: '#2E3A2C' },
+    ],
+    tipos: 'Cherry Bomb One + Quicksand + Nunito',
+    tema: 'mesa-jana',
+    numero: '04', legenda: 'jana vet', unidade: 'trabalhos',
+    pasta: '#F3ECDC', tinta: '#2E3A2C', botao: '#5E6B45', botaoTexto: '#F3ECDC',
+  },
   ayu: {
     handle: 'made.by._ayu',
     nome: 'Ayuri • designer gráfica no Japão',
@@ -305,7 +344,7 @@ const perfis = {
     ],
     tipos: 'sem serifa bem pesada + sans de etiqueta',
     tema: 'mesa-ayu',
-    numero: '04', legenda: 'made by ayu', rotulo: 'minha pasta', unidade: 'posts',
+    numero: '05', legenda: 'made by ayu', rotulo: 'minha pasta', unidade: 'posts',
     pasta: '#FFFAE8', tinta: '#1C2B2A', botao: '#FFED00', botaoTexto: '#1C2B2A',
   },
   identidade: {
@@ -316,7 +355,7 @@ const perfis = {
     link: '',
     fiz: ['Logotipo', 'Monograma', 'Lettering', 'Variações de fundo'],
     tema: 'mesa-logos',
-    numero: '05', legenda: 'logotipos', rotulo: 'minha prancheta', unidade: 'logotipos',
+    numero: '06', legenda: 'logotipos', rotulo: 'minha prancheta', unidade: 'logotipos',
     pasta: '#FFFDF6', tinta: '#5B3A1E', botao: '#2EC4BA', botaoTexto: '#1C2B2A',
   },
 };
