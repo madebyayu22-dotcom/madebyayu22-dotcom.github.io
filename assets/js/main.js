@@ -654,6 +654,7 @@ if ($('#gridBlog')) $('#gridBlog').innerHTML = posts.map((p, i) => `
 /* =========================================================
    FORMULÁRIO DE CONTATO
    ========================================================= */
+if ($('#formContato')) {
 const escolhidos = new Set();
 $('#opcoesServico').innerHTML = servicos.map(s => `
   <button type="button" data-servico="${s}" aria-pressed="false"
@@ -723,6 +724,7 @@ $('#formContato').addEventListener('submit', (e) => {
       botao.style.opacity = '';
     });
 });
+}
 
 /* =========================================================
    MENU MOBILE, BOTÃO TOPO E ANIMAÇÕES
