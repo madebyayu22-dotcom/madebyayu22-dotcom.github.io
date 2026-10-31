@@ -18,6 +18,8 @@ const categorias = [
     nota: 'Identidade visual completa e thumbnails para o canal de skincare da Tabi Nakazato.' },
   { id: 'jana',       nome: 'JANA Vet',                  icone: 'paw-print',    cor: 'bg-jana',
     nota: 'Identidade visual completa da JANA, veterinária em domicílio: logo, manual da marca, stickers, cartão de visitas, ímãs de geladeira e papel timbrado ♡' },
+  { id: 'valeria',    nome: 'Valéria Rocha',             icone: 'plane',        cor: 'bg-valeria',
+    nota: 'Marca pessoal da Valéria, CEO da BR21 Viagens: a proposta que eu montei para ela inspirar com as próprias viagens. Os primeiros conteúdos estão saindo do forno ✈' },
   { id: 'ayu',        nome: '@made.by._ayu',             icone: 'instagram',    cor: 'bg-creme-300',
     nota: 'Meu próprio Instagram: posts em que eu conto quem sou e mostro como posso ajudar a sua marca ✦' },
   { id: 'identidade', nome: 'Identidade Visual & Logos', icone: 'pen-tool',     cor: 'bg-turquesa-400',
@@ -129,6 +131,14 @@ const projetos = [
     titulo: 'Papel timbrado e receituário',
     desc: 'Folha A4 com logo, rastro de patinhas e rodapé de contatos, mostrada como receita de um paciente.',
     tags: ['Papelaria', 'Papel timbrado', 'Receituário'], icone: 'pen-tool', fundo: 'bg-jana' },
+
+  // ✈ Valéria Rocha → assets/images/portfolio/valeria-rocha/<pasta>/01.jpg…
+  { cat: 'valeria', carrossel: true, prancha: true, aspecto: 'aspect-video', pasta: 'proposta', total: 12,
+    cliente: 'Valéria Rocha · proposta de marca', rotuloCard: 'Proposta de marca & conteúdo · 12 páginas',
+    bastidor: 'Para uma mulher com 30 anos de estrada, criei a “Colagem Tropical”: retrato recortado dentro de um círculo-sol, beija-flor, hibiscos e costela-de-adão, com as cores quentes da identidade latina. A estratégia separa as duas vozes: a Valéria inspira com as próprias viagens, e a BR21 vende os pacotes.',
+    titulo: 'Proposta de marca e conteúdo',
+    desc: 'Quem é a Valéria, identidade visual Colagem Tropical, tom de voz, pilares de conteúdo, quadros fixos e kit de layouts no Canva.',
+    tags: ['Marca pessoal', 'Estratégia de conteúdo', 'Colagem'], icone: 'plane', fundo: 'bg-valeria' },
 
   // ✦ Meu Instagram → assets/images/portfolio/made-by-ayu/<carrossel>/01.jpg…
   { cat: 'ayu', carrossel: true, pasta: 'por-que-designer', total: 4,
@@ -271,7 +281,7 @@ function capaProjeto(p) {
 
 /* Pasta de cada categoria dentro de assets/images/portfolio/ */
 const pastaCategoria = {
-  clube: 'clube-do-livro', teacher: 'teacher-jess', tabi: 'tabi-skin-care', jana: 'jana-vet', ayu: 'made-by-ayu',
+  clube: 'clube-do-livro', teacher: 'teacher-jess', tabi: 'tabi-skin-care', jana: 'jana-vet', valeria: 'valeria-rocha', ayu: 'made-by-ayu',
   identidade: 'logotipos', video: 'videos',
 };
 
@@ -343,6 +353,23 @@ const perfis = {
     numero: '04', legenda: 'jana vet', unidade: 'trabalhos',
     pasta: '#F3ECDC', tinta: '#2E3A2C', botao: '#5E6B45', botaoTexto: '#F3ECDC',
   },
+  valeria: {
+    handle: '', nomeCurto: 'Valéria Rocha',
+    nome: 'CEO da BR21 Viagens e Turismo • 30 anos de estrada',
+    avatar: `${PASTA}/valeria-rocha/avatar-valeria.jpg`,
+    bio: 'Uma mulher que viaja do jeito que vive: inteira. Livre, sem amarras e sem preconceito, ela mostra os destinos de verdade para despertar em quem acompanha a vontade de embarcar também.',
+    link: '',
+    fiz: ['Proposta de marca', 'Identidade visual', 'Estratégia de conteúdo', 'Kit de layouts no Canva'],
+    paleta: [
+      { nome: 'sol', hex: '#F0B43A' }, { nome: 'laranja', hex: '#E06A12' },
+      { nome: 'hibisco', hex: '#C42A1F' }, { nome: 'azul', hex: '#1F4EB0' },
+      { nome: 'água', hex: '#173F5F' }, { nome: 'palha', hex: '#F1E4C8' },
+    ],
+    tipos: 'Borogodó + Asa Branca + DM Sans',
+    tema: 'mesa-valeria',
+    numero: '05', legenda: 'valéria rocha', unidade: 'trabalho',
+    pasta: '#F1E4C8', tinta: '#173F5F', botao: '#C42A1F', botaoTexto: '#F1E4C8',
+  },
   ayu: {
     handle: 'made.by._ayu',
     nome: 'Ayuri • designer gráfica no Japão',
@@ -356,7 +383,7 @@ const perfis = {
     ],
     tipos: 'sem serifa bem pesada + sans de etiqueta',
     tema: 'mesa-ayu',
-    numero: '05', legenda: 'made by ayu', rotulo: 'minha pasta', unidade: 'posts',
+    numero: '06', legenda: 'made by ayu', rotulo: 'minha pasta', unidade: 'posts',
     pasta: '#FFFAE8', tinta: '#1C2B2A', botao: '#FFED00', botaoTexto: '#1C2B2A',
   },
   identidade: {
@@ -367,7 +394,7 @@ const perfis = {
     link: '',
     fiz: ['Logotipo', 'Monograma', 'Lettering', 'Variações de fundo'],
     tema: 'mesa-logos',
-    numero: '06', legenda: 'logotipos', rotulo: 'minha prancheta', unidade: 'logotipos',
+    numero: '07', legenda: 'logotipos', rotulo: 'minha prancheta', unidade: 'logotipos',
     pasta: '#FFFDF6', tinta: '#5B3A1E', botao: '#2EC4BA', botaoTexto: '#1C2B2A',
   },
 };
