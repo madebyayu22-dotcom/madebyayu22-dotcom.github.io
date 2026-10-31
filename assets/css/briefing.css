@@ -1,0 +1,166 @@
+/* =========================================================
+   Made by Ayu — página do briefing (formulário completo)
+   ========================================================= */
+.bf-wrap { max-width: 760px; margin: 0 auto; padding: 120px 16px 80px; }
+@media (min-width: 640px) { .bf-wrap { padding: 140px 24px 100px; } }
+
+/* ---------- Capa ---------- */
+.bf-capa {
+  position: relative; background: #fff; border: 2px solid #1C2B2A;
+  box-shadow: 9px 9px 0 #1C2B2A; padding: 34px 22px 26px; transform: rotate(-.6deg);
+}
+@media (min-width: 640px) { .bf-capa { padding: 44px 40px 34px; } }
+.bf-capa .washi { top: -16px; left: 50%; transform: translateX(-50%) rotate(-3deg); }
+.bf-selo {
+  position: absolute; top: -30px; right: -14px; width: 76px; height: 76px; z-index: 20;
+}
+.bf-selo img { width: 100%; height: 100%; border-radius: 50%; border: 2px solid #000; box-shadow: 4px 4px 0 #000; }
+@media (min-width: 640px) { .bf-selo { width: 92px; height: 92px; right: -30px; top: -34px; } }
+.bf-etiqueta {
+  display: inline-flex; align-items: center; gap: 8px; transform: rotate(-2deg);
+  border: 3px solid #000; background: #FCE184; padding: 4px 12px; box-shadow: 4px 4px 0 #000;
+  font: 800 12px/1.3 "Bricolage Grotesque", system-ui, sans-serif; text-transform: uppercase; letter-spacing: .08em;
+}
+.bf-titulo {
+  margin: 22px 0 0; font: 800 clamp(2rem, 7vw, 3.2rem)/1.05 "Bricolage Grotesque", system-ui, sans-serif;
+  letter-spacing: -.02em; color: #1C2B2A;
+}
+.bf-titulo .destaque {
+  display: inline-block; transform: rotate(-2deg); background: #2EC4BA; border: 3px solid #000;
+  box-shadow: 5px 5px 0 #000; padding: 0 .2em;
+}
+.bf-intro { margin-top: 18px; font-size: 17px; line-height: 1.65; color: rgba(28,43,42,.88); }
+.bf-recado { font-family: Caveat, cursive; font-size: 1.6rem; line-height: 1.2; color: #0B6F6A; }
+.bf-processo {
+  margin-top: 22px; display: grid; gap: 10px; counter-reset: passo;
+}
+@media (min-width: 640px) { .bf-processo { grid-template-columns: repeat(3, 1fr); } }
+.bf-processo li {
+  list-style: none; border: 2px solid #1C2B2A; background: #FFF8E1; padding: 10px 12px;
+  box-shadow: 3px 3px 0 #1C2B2A; font-size: 14px; line-height: 1.4;
+}
+.bf-processo li:nth-child(2) { background: #C5EEEB; transform: rotate(.8deg); }
+.bf-processo li:nth-child(3) { background: #FEEFB8; transform: rotate(-.8deg); }
+.bf-processo b { display: block; font: 800 15px "Bricolage Grotesque", system-ui, sans-serif; }
+.bf-processo li::before {
+  counter-increment: passo; content: "0" counter(passo) ".";
+  font-family: Caveat, cursive; font-size: 1.6rem; color: #0B6F6A; line-height: 1;
+}
+.bf-tempo { margin-top: 18px; display: inline-flex; gap: 8px; align-items: center; font-weight: 700; font-size: 14px; }
+
+/* ---------- Progresso ---------- */
+.bf-progresso { margin: 44px 0 18px; }
+.bf-progresso-topo { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.bf-progresso-nome { font: 800 15px "Bricolage Grotesque", system-ui, sans-serif; }
+.bf-progresso-num { font-family: Caveat, cursive; font-size: 1.5rem; color: #0B6F6A; white-space: nowrap; }
+.bf-trilho {
+  margin-top: 8px; height: 18px; border: 2px solid #1C2B2A; background: #fff; border-radius: 999px;
+  box-shadow: 3px 3px 0 #1C2B2A; overflow: hidden;
+}
+.bf-barra {
+  height: 100%; width: 0; border-right: 2px solid #1C2B2A;
+  background: repeating-linear-gradient(45deg, #2EC4BA 0 10px, #5CCFC6 10px 20px);
+  transition: width .5s cubic-bezier(.2,.8,.3,1.1);
+}
+
+/* ---------- Folha da etapa ---------- */
+.bf-folha {
+  position: relative; background: #fff; border: 2px solid #1C2B2A; box-shadow: 9px 9px 0 #1C2B2A;
+  padding: 30px 20px 26px;
+}
+@media (min-width: 640px) { .bf-folha { padding: 38px 40px 32px; } }
+.bf-folha::before {           /* margem vermelha de caderno */
+  content: ""; position: absolute; top: 0; bottom: 0; left: 10px; width: 2px; background: rgba(255,138,115,.55);
+}
+@media (min-width: 640px) { .bf-folha::before { left: 20px; } }
+.bf-folha .fita { top: -14px; right: 26px; transform: rotate(5deg); }
+.bf-etapa { display: none; animation: cardIn .45s cubic-bezier(.2,.8,.3,1.2) both; }
+.bf-etapa.ativa { display: block; }
+.bf-etapa-titulo {
+  display: inline-block; transform: rotate(-1deg); background: #FCE184; border: 2px solid #1C2B2A;
+  box-shadow: 4px 4px 0 #1C2B2A; padding: 6px 14px;
+  font: 800 clamp(1.4rem, 5vw, 1.9rem)/1.15 "Bricolage Grotesque", system-ui, sans-serif;
+}
+.bf-etapa-desc { margin-top: 14px; font-size: 15.5px; line-height: 1.6; color: rgba(28,43,42,.85); white-space: pre-line; }
+.bf-explica {
+  margin-top: 16px; display: grid; gap: 10px;
+}
+.bf-explica div {
+  border: 2px dashed rgba(14,140,133,.6); background: #F3FBFA; padding: 10px 12px; font-size: 14.5px; line-height: 1.5;
+}
+.bf-explica b { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800; }
+
+/* ---------- Perguntas ---------- */
+.bf-perguntas { margin-top: 26px; display: grid; gap: 26px; }
+.bf-q label.bf-rotulo, .bf-q legend {
+  display: block; font: 800 16px/1.35 "Bricolage Grotesque", system-ui, sans-serif; padding: 0;
+}
+.bf-q legend { margin-bottom: 0; }
+.bf-q fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.bf-obrig { color: #E0533A; margin-left: 2px; }
+.bf-ajuda { margin-top: 4px; font-size: 14px; line-height: 1.45; color: rgba(28,43,42,.66); }
+.bf-campo {
+  margin-top: 10px; width: 100%; box-sizing: border-box; border: 2px solid #1C2B2A; border-radius: 10px;
+  background: #FFFDF6; padding: 12px 14px; font: inherit; font-size: 16px; color: #1C2B2A; outline: none;
+  transition: background .2s, box-shadow .2s;
+}
+textarea.bf-campo { resize: vertical; min-height: 104px; line-height: 1.5; }
+.bf-campo:focus { background: #fff; box-shadow: 4px 4px 0 #2EC4BA; }
+.bf-q.erro .bf-campo, .bf-q.erro .bf-opcoes { box-shadow: 4px 4px 0 #FF8A73; }
+.bf-msg-erro { display: none; margin-top: 8px; font-family: Caveat, cursive; font-size: 1.35rem; color: #C23A22; }
+.bf-q.erro .bf-msg-erro { display: block; }
+
+/* opções (rádio / caixa de seleção) como etiquetas */
+.bf-opcoes { margin-top: 10px; display: grid; gap: 8px; border-radius: 12px; }
+.bf-opcao { position: relative; display: block; cursor: pointer; }
+.bf-opcao input { position: absolute; opacity: 0; pointer-events: none; }
+.bf-opcao span.caixa {
+  display: flex; align-items: flex-start; gap: 10px; border: 2px solid #1C2B2A; background: #fff;
+  padding: 10px 12px; border-radius: 10px; font-size: 15px; line-height: 1.4; font-weight: 600;
+  transition: transform .15s, box-shadow .15s, background .15s;
+}
+.bf-opcao span.caixa::before {
+  content: ""; flex: none; margin-top: 1px; width: 18px; height: 18px; border: 2px solid #1C2B2A; background: #fff;
+  border-radius: 50%; box-sizing: border-box;
+}
+.bf-opcao.multi span.caixa::before { border-radius: 4px; }
+.bf-opcao:hover span.caixa { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 #1C2B2A; }
+.bf-opcao input:checked + span.caixa { background: #C5EEEB; box-shadow: 3px 3px 0 #1C2B2A; }
+.bf-opcao input:checked + span.caixa::before {
+  background: #2EC4BA; box-shadow: inset 0 0 0 3px #fff;
+}
+.bf-opcao.multi input:checked + span.caixa::before {
+  background: #2EC4BA url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231C2B2A' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/12px no-repeat;
+  box-shadow: none;
+}
+.bf-opcao input:focus-visible + span.caixa { outline: 3px solid #2EC4BA; outline-offset: 2px; }
+.bf-opcoes.horarios { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 640px) { .bf-opcoes.horarios { grid-template-columns: repeat(4, 1fr); } }
+.bf-outro-campo { margin-top: 6px; }
+
+/* ---------- Botões ---------- */
+.bf-botoes { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: center; }
+.bf-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer;
+  border: 2px solid #1C2B2A; border-radius: 12px; padding: 13px 24px;
+  font: 800 16px "Bricolage Grotesque", system-ui, sans-serif; color: #1C2B2A;
+  box-shadow: 5px 5px 0 #1C2B2A; transition: transform .15s, box-shadow .15s;
+}
+.bf-btn:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 #1C2B2A; }
+.bf-btn:active { transform: translate(3px, 3px); box-shadow: none; }
+.bf-btn:disabled { opacity: .6; cursor: wait; }
+.bf-btn.primario { background: #2EC4BA; margin-left: auto; }
+.bf-btn.secundario { background: #fff; }
+.bf-btn svg { width: 20px; height: 20px; }
+
+/* ---------- Sucesso ---------- */
+.bf-sucesso { display: none; text-align: center; padding: 20px 0 6px; }
+.bf-sucesso.ativa { display: block; animation: cardIn .5s cubic-bezier(.2,.8,.3,1.2) both; }
+.bf-sucesso svg.estrela { width: 64px; height: 64px; fill: #2EC4BA; animation: gira 4s linear infinite; }
+.bf-sucesso h2 { margin: 16px 0 0; font: 800 2rem/1.1 "Bricolage Grotesque", system-ui, sans-serif; }
+.bf-sucesso p { margin: 10px auto 0; max-width: 460px; line-height: 1.6; }
+.bf-erro-envio {
+  display: none; margin-top: 18px; border: 2px solid #1C2B2A; background: #FFE3DC; padding: 10px 14px;
+  font-weight: 700; box-shadow: 3px 3px 0 #1C2B2A;
+}
+.bf-erro-envio.ativa { display: block; }
