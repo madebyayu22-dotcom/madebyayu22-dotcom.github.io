@@ -569,3 +569,28 @@ body {
   content: ""; bottom: 18px; left: 18px; width: 54px; height: 54px; transform: rotate(-14deg);
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F3ECDC'%3E%3Ccircle cx='6' cy='8' r='2.4'/%3E%3Ccircle cx='10.5' cy='4.6' r='2.4'/%3E%3Ccircle cx='15.5' cy='4.6' r='2.4'/%3E%3Ccircle cx='19' cy='8.6' r='2.4'/%3E%3Cpath d='M12.6 10.5c3.4 0 6.6 4.2 6.6 7.4 0 2.4-1.8 3.4-3.6 3.1-1.3-.2-2-.8-3-.8s-1.7.6-3 .8c-1.8.3-3.6-.7-3.6-3.1 0-3.2 3.2-7.4 6.6-7.4Z'/%3E%3C/svg%3E") center/contain no-repeat;
 }
+
+
+/* =========================================================
+   MESA DO CLIENTE — Valéria Rocha (azul com sol e hibisco, sem verde)
+   ========================================================= */
+.bg-valeria { background-color: #F0B43A; }
+.mesa-valeria {
+  position: relative;
+  overflow: hidden;
+  background-color: #1F4EB0;
+  background-image:
+    radial-gradient(circle at 88% 10%, #F0B43A 0 70px, transparent 71px),
+    radial-gradient(rgba(241,228,200,.12) 1.6px, transparent 2px),
+    radial-gradient(ellipse at 10% 95%, rgba(23,63,95,.6), transparent 50%);
+  background-size: auto, 22px 22px, auto;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+@media (min-width: 640px) {
+  .mesa-valeria { border: 3px solid #000; box-shadow: 12px 12px 0 #E06A12; }
+}
+/* hibisco e aviãozinho nos cantos */
+.mesa-valeria::before, .mesa-valeria::after { position: absolute; pointer-events: none; line-height: 1; }
+.mesa-valeria::before { content: "✿"; bottom: 16px; left: 18px; font-size: 64px; color: #C42A1F; text-shadow: 3px 3px 0 #173F5F; transform: rotate(-12deg); }
+.mesa-valeria::after  { content: "✈"; top: 22px; left: 22px; font-size: 44px; color: #F1E4C8; text-shadow: 3px 3px 0 #173F5F; transform: rotate(-18deg); }
