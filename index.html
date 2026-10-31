@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Made by Ayu</title>
+<meta name="description" content="Portfólio criativo de design gráfico, identidade visual e edição de vídeos para YouTube e Instagram." />
+  <link rel="stylesheet" href="assets/css/tailwind.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/png" href="assets/images/logo-made-by-ayu.png" />
+</head>
+<body>
+<!-- Molde reutilizável de estrela retrô -->
+  <svg width="0" height="0" class="absolute" aria-hidden="true">
+    <symbol id="estrela" viewBox="0 0 24 24"><path d="M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z"/></symbol>
+  </svg>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header id="topo" class="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6">
+    <!-- Grade em 3 colunas: a marca fica sempre no centro -->
+    <nav class="mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-2 rounded-2xl border-2 border-tinta bg-creme-50 px-3 py-3 shadow-duro-sm sm:px-4">
+
+      <!-- Esquerda: links (computador) / espaço vazio que equilibra o botão (celular) -->
+      <div class="justify-self-start">
+        <span class="block h-9 w-9 lg:hidden" aria-hidden="true"></span>
+        <ul class="hidden items-center gap-1 text-sm font-bold lg:flex">
+          <li><a href="#portfolio" class="rounded-full px-4 py-2 transition hover:bg-creme-300">Portfólio</a></li>
+          <li><a href="#processo" class="rounded-full px-4 py-2 transition hover:bg-creme-300">Processo</a></li>
+        </ul>
+      </div>
+
+      <!-- Centro: MARCA EM TEXTO, primeira coisa escrita no site -->
+      <a href="#inicio" class="group flex items-center justify-center gap-1.5 whitespace-nowrap font-display text-lg font-extrabold uppercase tracking-tight sm:text-2xl" aria-label="Made by Ayu — início">
+        <svg class="h-3.5 w-3.5 fill-turquesa-500 transition-transform group-hover:-rotate-45" aria-hidden="true"><use href="#estrela"/></svg>
+        <span>Made by</span>
+        <span class="inline-block -rotate-3 border-[3px] border-black bg-turquesa-400 px-2 leading-tight shadow-[3px_3px_0_#000] transition-transform group-hover:rotate-2">Ayu</span>
+        <svg class="h-3.5 w-3.5 fill-creme-400 transition-transform group-hover:rotate-45" aria-hidden="true"><use href="#estrela"/></svg>
+      </a>
+
+      <!-- Direita: links + CTA (computador) / botão de menu (celular) -->
+      <div class="justify-self-end">
+        <ul class="hidden items-center gap-1 text-sm font-bold lg:flex">
+          <li class="ml-1">
+            <a href="#contato" class="inline-block rounded-full border-2 border-tinta bg-turquesa-400 px-5 py-2 shadow-duro-sm transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-duro active:translate-x-0.5 active:translate-y-0.5 active:shadow-none">
+              Fale comigo ✦
+            </a>
+          </li>
+        </ul>
+        <button id="btnMenu" class="grid h-9 w-9 place-items-center rounded-lg border-2 border-tinta bg-creme-300 shadow-duro-sm lg:hidden" aria-label="Abrir menu" aria-expanded="false">
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div id="menuMobile" class="mx-auto mt-2 hidden max-w-6xl rounded-2xl border-2 border-tinta bg-creme-50 p-3 shadow-duro lg:hidden">
+      <ul class="grid gap-1 font-display text-lg font-bold">
+        <li><a href="#portfolio" class="block rounded-xl px-3 py-2.5 hover:bg-creme-200">Portfólio</a></li>
+        <li><a href="#processo" class="block rounded-xl px-3 py-2.5 hover:bg-creme-200">Processo</a></li>
+        <li><a href="#contato" class="mt-1 block rounded-xl border-2 border-tinta bg-turquesa-400 px-3 py-2.5 text-center">Fale comigo ✦</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="inicio" class="papel-hero rasgado-baixo relative overflow-hidden pb-20 pt-28 sm:pb-28 sm:pt-36">
+
+      <!-- Margem vermelha de caderno (desktop) -->
+      <div class="pointer-events-none absolute inset-y-0 left-[4%] hidden w-px bg-coral/60 lg:block"></div>
+      <div class="pointer-events-none absolute inset-y-0 left-[calc(4%+4px)] hidden w-px bg-coral/40 lg:block"></div>
+
+      <!-- ✨ Elementos espalhados pelo fundo -->
+      <svg class="flutua absolute left-[7%] top-24 h-7 w-7 fill-turquesa-500" style="--r:10deg" aria-hidden="true"><use href="#estrela"/></svg>
+      <svg class="flutua-2 absolute left-[42%] top-28 hidden h-5 w-5 fill-creme-400 lg:block" aria-hidden="true"><use href="#estrela"/></svg>
+      <svg class="flutua absolute bottom-24 left-[3%] h-9 w-9 fill-creme-400" style="--r:-15deg" aria-hidden="true"><use href="#estrela"/></svg>
+      <svg class="flutua-2 absolute right-[4%] top-[55%] hidden h-6 w-6 fill-coral sm:block" aria-hidden="true"><use href="#estrela"/></svg>
+      <svg class="flutua absolute bottom-16 left-[48%] hidden h-4 w-4 fill-turquesa-600 lg:block" aria-hidden="true"><use href="#estrela"/></svg>
+
+      <!-- Corações desenhados à mão -->
+      <svg class="flutua-2 absolute right-[46%] top-[62%] hidden h-8 w-8 lg:block" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 27C9 21.5 4 17.5 4 11.8 4 8 7 5.5 10.3 5.8c2.4.2 4.3 1.8 5.7 4 1.4-2.3 3.4-3.9 5.9-4 3.4-.2 6.3 2.4 6.1 6.1-.3 5.6-5.4 9.6-12 15.1Z"
+              fill="#FF8A73" stroke="#1C2B2A" stroke-width="2.2" stroke-linejoin="round"/>
+      </svg>
+      <svg class="flutua absolute left-[12%] top-[48%] hidden h-6 w-6 sm:block" style="--r:-12deg" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 27C9 21.5 4 17.5 4 11.8 4 8 7 5.5 10.3 5.8c2.4.2 4.3 1.8 5.7 4 1.4-2.3 3.4-3.9 5.9-4 3.4-.2 6.3 2.4 6.1 6.1-.3 5.6-5.4 9.6-12 15.1Z"
+              stroke="#0E8C85" stroke-width="2.5" stroke-linejoin="round"/>
+      </svg>
+
+      <!-- Espiral de rascunho -->
+      <svg class="absolute right-[2%] top-24 hidden h-16 w-16 opacity-70 sm:block lg:right-[44%] lg:top-auto lg:bottom-28" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <path d="M32 32c0-2 2-3 3.5-2s1.8 4-.5 5.5-6.5.6-7.5-3 1.5-8 6.5-8.5 9.5 3.5 9.5 8.5-4.5 11-11 11-12-5-12-12 6-14 14-14 15 6 15 15"
+              stroke="#1C2B2A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+
+      <div class="relative mx-auto grid max-w-6xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-10">
+
+        <!-- ===== Colagem da foto + selo giratório =====
+             Tamanho travado em CSS (assets/css/style.css → .hero-colagem):
+             280px no celular, 320px no tablet, 360px no computador. -->
+        <div class="hero-colagem order-first lg:order-last">
+
+          <!-- Recortes de papel desalinhados atrás da polaroid -->
+          <div class="hero-fundo hero-fundo-turquesa" aria-hidden="true"></div>
+          <div class="hero-fundo hero-fundo-amarelo quadriculado" aria-hidden="true"></div>
+
+          <!-- Polaroid -->
+          <figure class="polaroid">
+            <span class="washi washi-amarela polaroid-fita" aria-hidden="true"></span>
+
+            <!-- FOTO PRINCIPAL → assets/images/foto-ayu.jpg -->
+            <img id="fotoPerfil" class="polaroid-foto" src="assets/images/foto-ayu.jpg"
+                 alt="Foto de perfil da Ayu, designer gráfica" fetchpriority="high" />
+
+            <figcaption class="polaroid-legenda">oi, eu sou a Ayu!</figcaption>
+          </figure>
+
+          <!-- 🎡 Logo girando, sobreposta ao canto superior direito -->
+          <div class="hero-selo selo" aria-hidden="true">
+            <img class="selo-gira" src="assets/images/logo-made-by-ayu.png" alt="" />
+          </div>
+
+          <!-- Adesivos -->
+          <span class="hero-adesivo hero-adesivo-mao">✦ feito à mão</span>
+          <span class="hero-adesivo hero-adesivo-video">✦ Branding for you</span>
+
+          <!-- Seta + recado à mão (só no computador) -->
+          <div class="pointer-events-none absolute -left-40 bottom-24 hidden w-36 lg:block" aria-hidden="true">
+            <p class="-rotate-6 font-mao text-2xl leading-6 text-turquesa-700">essa sou eu! ♡</p>
+            <svg class="ml-10 mt-1 h-14 w-24" viewBox="0 0 100 60" fill="none">
+              <path d="M4 8c18 4 40 10 58 26 8 7 14 14 20 20" stroke="#1C2B2A" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M70 52l13 3-2-13" stroke="#1C2B2A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- ===== Texto ===== -->
+        <div class="relative text-center lg:text-left">
+          <span class="inline-flex -rotate-2 items-center gap-2 border-[3px] border-black bg-creme-300 px-3 py-1 font-display text-xs font-bold uppercase tracking-wider shadow-[4px_4px_0_#000]">
+            <i data-lucide="scissors" class="h-3.5 w-3.5"></i> Made by Ayu · design & branding
+          </span>
+
+          <h1 class="relative mt-7 font-display text-[2.6rem] font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+            Recorto ideias,<br />
+            colo <span class="relative inline-block -rotate-2 border-[3px] border-black bg-turquesa-400 px-2 shadow-[5px_5px_0_#000]">cores</span><br />
+            e crio <span class="relative inline-block">
+              histórias
+              <!-- sublinhado rabiscado -->
+              <svg class="absolute -bottom-3 left-0 h-4 w-full" viewBox="0 0 220 16" preserveAspectRatio="none" fill="none" aria-hidden="true">
+                <path d="M3 10c30-6 60-7 90-4s70 4 124-3M10 14c40-4 90-5 140-2" stroke="#F9D25A" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </span>.
+            <!-- estrelinhas desenhadas perto do título -->
+            <span class="absolute -top-6 right-2 text-3xl text-turquesa-500 sm:right-6" aria-hidden="true">✨</span>
+          </h1>
+
+          <p class="mx-auto mt-7 max-w-lg text-lg leading-relaxed text-tinta/85 lg:mx-0">
+            Crio <strong>identidades visuais, logotipos e carrosséis</strong> para marcas com alma —
+            de clubes do livro a marcas de skin care. Tudo com um toque autoral e muito afeto.
+          </p>
+
+          <!-- Recado tipo post-it -->
+          <p class="relative mt-5 inline-block rotate-1 border-[3px] border-black bg-creme-200 px-4 py-1 font-mao text-2xl text-turquesa-800 shadow-[4px_4px_0_#083D3B]">
+            ↳ bora fazer algo único juntas?
+            <span class="washi washi-listrada !h-4 !w-12 -right-4 -top-2 rotate-[24deg]" aria-hidden="true"></span>
+          </p>
+
+          <div class="mt-9 flex flex-col items-stretch gap-4 sm:flex-row sm:justify-center lg:justify-start">
+            <a href="#portfolio" class="group inline-flex items-center justify-center gap-2 rounded-xl border-[3px] border-black bg-turquesa-400 px-7 py-3.5 font-display font-bold shadow-[6px_6px_0_#000] transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[9px_9px_0_#000] active:translate-x-1 active:translate-y-1 active:shadow-none">
+              Ver projetos
+              <i data-lucide="arrow-right" class="h-5 w-5 transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <a href="#contato" class="inline-flex items-center justify-center gap-2 rounded-xl border-[3px] border-black bg-white px-7 py-3.5 font-display font-bold shadow-[6px_6px_0_#083D3B] transition-all hover:-translate-x-1 hover:-translate-y-1 hover:bg-creme-200 hover:shadow-[9px_9px_0_#083D3B] active:translate-x-1 active:translate-y-1 active:shadow-none">
+              <i data-lucide="message-circle-heart" class="h-5 w-5"></i> Fale comigo
+            </a>
+          </div>
+
+          <!-- Rabisco de coração no canto do texto -->
+          <svg class="absolute -bottom-10 right-4 hidden h-12 w-12 -rotate-12 sm:block" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M16 27C9 21.5 4 17.5 4 11.8 4 8 7 5.5 10.3 5.8c2.4.2 4.3 1.8 5.7 4 1.4-2.3 3.4-3.9 5.9-4 3.4-.2 6.3 2.4 6.1 6.1-.3 5.6-5.4 9.6-12 15.1Z"
+                  stroke="#1C2B2A" stroke-width="1.8" stroke-dasharray="3 3" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- Letreiro rolante -->
+    <div class="relative z-10 -rotate-1 overflow-hidden border-y-2 border-tinta bg-tinta py-3 text-creme-200">
+      <div class="letreiro flex w-max gap-8 whitespace-nowrap font-display text-lg font-bold uppercase tracking-wide">
+        <span class="flex gap-8" id="letreiroConteudo"></span>
+        <span class="flex gap-8" aria-hidden="true" id="letreiroCopia"></span>
+      </div>
+    </div>
+
+    <!-- ===================== PORTFÓLIO ===================== -->
+    <section id="portfolio" class="reveal relative py-20 sm:py-28">
+      <svg class="flutua absolute right-[5%] top-16 h-10 w-10 fill-turquesa-400" style="--r:-12deg"><use href="#estrela"/></svg>
+
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="relative inline-block">
+          <span class="fita listrada -left-4 -top-3 -rotate-6 !w-20"></span>
+          <h2 class="rotate-1 border-2 border-tinta bg-white px-5 py-3 font-display text-4xl font-extrabold shadow-duro sm:text-5xl">
+            Meu portfólio
+          </h2>
+        </div>
+        <p class="mt-5 max-w-xl text-lg text-tinta/80">Escolha uma pastinha e explore cada universo que eu ajudei a construir.</p>
+
+        <!-- Abas / filtros -->
+        <div class="abas -mx-4 mt-8 overflow-x-auto px-4 pb-3 pt-1 sm:mx-0 sm:px-0">
+          <div id="filtros" role="tablist" aria-label="Categorias do portfólio" class="flex w-max gap-3 sm:w-auto sm:flex-wrap"></div>
+        </div>
+
+        <!-- Nota da categoria (post-it) -->
+        <div id="descCategoria" class="pautado relative mt-6 max-w-2xl -rotate-1 border-2 border-tinta bg-creme-200 p-4 pl-5 font-mao text-2xl leading-8 shadow-duro-sm"></div>
+
+        <!-- Grid de projetos -->
+        <div id="gridProjetos" class="mt-12 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE VÍDEOS GUARDADA PARA DEPOIS.
+         Para mostrar de novo: troque <template id="secao-videos"> por nada e apague o </template> do final. -->
+    <template id="secao-videos">
+    <!-- ===================== DESTAQUE: EDIÇÃO DE VÍDEO ===================== -->
+    <section id="videos" class="reveal relative">
+      <div class="rasgado-cima rasgado-baixo bg-turquesa-500 py-24 sm:py-28">
+        <div class="quadriculado absolute inset-0 opacity-40"></div>
+        <div class="relative mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="grid items-center gap-12 lg:grid-cols-2">
+            <div>
+              <span class="inline-flex rotate-2 items-center gap-2 border-2 border-tinta bg-coral px-3 py-1 font-display text-xs font-bold uppercase tracking-wider shadow-duro-sm">
+                <i data-lucide="clapperboard" class="h-3.5 w-3.5"></i> Criação & edição de vídeos
+              </span>
+              <h2 class="mt-5 font-display text-4xl font-extrabold leading-tight text-tinta sm:text-5xl">
+                Vídeos que <span class="bg-creme-300 px-1.5 border-2 border-tinta inline-block -rotate-1">prendem</span> do primeiro ao último segundo.
+              </h2>
+              <p class="mt-5 max-w-lg text-lg leading-relaxed text-tinta">
+                Produzo conteúdos dinâmicos pensados para cada plataforma: roteiro visual, cortes ritmados,
+                legendas animadas, trilha e identidade da marca em cada frame.
+              </p>
+              <a href="#portfolio" data-ir-cat="video" class="mt-8 inline-flex items-center gap-2 rounded-xl border-2 border-tinta bg-creme-50 px-6 py-3 font-display font-bold shadow-duro transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-duro-lg active:translate-x-1 active:translate-y-1 active:shadow-none">
+                <i data-lucide="play" class="h-5 w-5 fill-current"></i> Ver vídeos no portfólio
+              </a>
+            </div>
+
+            <!-- Cartões de formatos -->
+            <div class="grid grid-cols-2 gap-5">
+              <div class="col-span-2 -rotate-1 border-2 border-tinta bg-creme-50 p-5 shadow-duro transition-transform hover:rotate-0">
+                <div class="flex items-center gap-3">
+                  <span class="grid h-12 w-12 place-items-center rounded-lg border-2 border-tinta bg-coral"><i data-lucide="monitor-play" class="h-6 w-6"></i></span>
+                  <div>
+                    <h3 class="font-display text-xl font-extrabold">YouTube</h3>
+                    <p class="text-sm font-medium text-tinta/70">vídeos longos · 16:9</p>
+                  </div>
+                </div>
+                <p class="mt-3 text-sm leading-relaxed">Vlogs, aulas e vídeos educativos com narrativa envolvente, thumbnails e capítulos.</p>
+              </div>
+              <div class="rotate-2 border-2 border-tinta bg-creme-300 p-5 shadow-duro transition-transform hover:rotate-0">
+                <span class="grid h-11 w-11 place-items-center rounded-lg border-2 border-tinta bg-white"><i data-lucide="smartphone" class="h-5 w-5"></i></span>
+                <h3 class="mt-3 font-display text-lg font-extrabold leading-tight">Reels & Shorts</h3>
+                <p class="mt-1 text-sm">Verticais 9:16, ganchos fortes e cortes no ritmo da trend.</p>
+              </div>
+              <div class="-rotate-2 border-2 border-tinta bg-white p-5 shadow-duro transition-transform hover:rotate-0">
+                <span class="grid h-11 w-11 place-items-center rounded-lg border-2 border-tinta bg-turquesa-200"><i data-lucide="badge-check" class="h-5 w-5"></i></span>
+                <h3 class="mt-3 font-display text-lg font-extrabold leading-tight">Reels de marca</h3>
+                <p class="mt-1 text-sm">Publis e lançamentos com a identidade visual do cliente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </template>
+
+    <!-- ===================== FERRAMENTAS / MEU PROCESSO ===================== -->
+    <section id="processo" class="reveal relative py-20 sm:py-28">
+      <svg class="flutua-2 absolute left-[4%] top-24 hidden h-9 w-9 fill-coral sm:block"><use href="#estrela"/></svg>
+
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="text-center">
+          <p class="font-mao text-3xl text-turquesa-700">minha caixinha de ferramentas ✂</p>
+          <h2 class="mx-auto mt-2 inline-block -rotate-1 border-2 border-tinta bg-creme-300 px-5 py-3 font-display text-4xl font-extrabold shadow-duro sm:text-5xl">
+            Meu processo
+          </h2>
+        </div>
+
+        <!-- Mesa de trabalho com adesivos -->
+        <div class="quadriculado relative mt-14 rounded-3xl border-2 border-dashed border-turquesa-600/50 bg-white/50 px-5 py-12 sm:px-10">
+          <div id="gridFerramentas" class="grid gap-10 md:grid-cols-3"></div>
+
+          <!-- Etapas do processo -->
+          <ol class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <li class="-rotate-1 border-2 border-tinta bg-creme-100 p-4 shadow-duro-sm">
+              <span class="font-mao text-3xl text-turquesa-700">01.</span>
+              <p class="font-display font-bold">Briefing & escuta</p>
+              <p class="text-sm text-tinta/75">Entendo sua marca, público e objetivos.</p>
+            </li>
+            <li class="rotate-1 border-2 border-tinta bg-turquesa-100 p-4 shadow-duro-sm">
+              <span class="font-mao text-3xl text-turquesa-700">02.</span>
+              <p class="font-display font-bold">Moodboard</p>
+              <p class="text-sm text-tinta/75">Referências, cores e a "vibe" do projeto.</p>
+            </li>
+            <li class="-rotate-1 border-2 border-tinta bg-white p-4 shadow-duro-sm">
+              <span class="font-mao text-3xl text-turquesa-700">03.</span>
+              <p class="font-display font-bold">Criação</p>
+              <p class="text-sm text-tinta/75">Design e edição com ajustes em parceria.</p>
+            </li>
+            <li class="rotate-1 border-2 border-tinta bg-creme-300 p-4 shadow-duro-sm">
+              <span class="font-mao text-3xl text-turquesa-700">04.</span>
+              <p class="font-display font-bold">Entrega ✦</p>
+              <p class="text-sm text-tinta/75">Arquivos organizados e prontos para postar.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG GUARDADO PARA DEPOIS.
+         Para mostrar de novo: apague a linha <template id="secao-blog"> e o </template> do final. -->
+    <template id="secao-blog">
+    <!-- ===================== BLOG ===================== -->
+    <section id="blog" class="reveal relative bg-creme-200/70 py-20 sm:py-28">
+      <div class="pautado absolute inset-0 opacity-60"></div>
+      <div class="relative mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <div class="relative inline-block">
+              <span class="fita tq -right-6 -top-3 rotate-12 !w-20"></span>
+              <h2 class="-rotate-1 border-2 border-tinta bg-white px-5 py-3 font-display text-4xl font-extrabold shadow-duro sm:text-5xl">
+                Blog & temáticas
+              </h2>
+            </div>
+            <p class="mt-5 max-w-xl text-lg text-tinta/80">Capas dos carrosséis que eu criei sobre design, leitura, idiomas e autocuidado.</p>
+          </div>
+          <a href="https://instagram.com/made.by._ayu" target="_blank" rel="noopener"
+             class="group inline-flex items-center gap-2 self-start rounded-full border-2 border-tinta bg-white px-5 py-2.5 font-display text-sm font-bold shadow-duro-sm transition-all hover:-translate-y-0.5 hover:bg-turquesa-200 hover:shadow-duro">
+            Ver tudo no Instagram <i data-lucide="arrow-up-right" class="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"></i>
+          </a>
+        </div>
+
+        <div id="gridBlog" class="mt-14 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+    </template>
+
+    <!-- ===================== CONTATO ===================== -->
+    <section id="contato" class="reveal relative py-20 sm:py-28">
+      <svg class="flutua absolute right-[10%] top-14 h-10 w-10 fill-creme-400" style="--r:20deg"><use href="#estrela"/></svg>
+
+      <div class="mx-auto grid max-w-6xl gap-14 px-4 sm:px-6 lg:grid-cols-2">
+        <div>
+          <p class="font-mao text-3xl text-turquesa-700">psiu, vem cá ↓</p>
+          <h2 class="mt-2 font-display text-4xl font-extrabold leading-tight sm:text-5xl">
+            Vamos criar algo <span class="marca-texto">juntas</span>?
+          </h2>
+          <p class="mt-4 max-w-md text-lg text-tinta/80">Me conta sobre sua marca ou ideia de projeto. Respondo em até 2 dias úteis.</p>
+
+          <div class="mt-8 grid max-w-sm gap-4">
+            <!-- E-MAIL: troque aqui quando tiver o e-mail profissional -->
+            <div class="flex -rotate-1 items-center gap-3 border-2 border-tinta bg-white p-3 shadow-duro-sm transition-all hover:rotate-0 hover:shadow-duro">
+              <a href="mailto:ayuhunas@gmail.com" aria-label="Enviar e-mail" class="grid h-10 w-10 shrink-0 place-items-center rounded-lg border-2 border-tinta bg-creme-300"><i data-lucide="mail" class="h-5 w-5"></i></a>
+              <span id="emailTexto" class="min-w-0 flex-1 select-all text-[15px] font-bold [overflow-wrap:anywhere] sm:text-base">ayuhunas@gmail.com</span>
+              <button type="button" id="btnCopiarEmail" class="shrink-0 rounded-full border-2 border-tinta bg-turquesa-300 px-3 py-1 text-xs font-bold shadow-duro-sm transition-all hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-none">copiar</button>
+            </div>
+            <a href="https://instagram.com/made.by._ayu" target="_blank" rel="noopener" class="flex rotate-1 items-center gap-3 border-2 border-tinta bg-white p-3 shadow-duro-sm transition-all hover:rotate-0 hover:shadow-duro">
+              <span class="grid h-10 w-10 place-items-center rounded-lg border-2 border-tinta bg-turquesa-300"><i data-lucide="instagram" class="h-5 w-5"></i></span>
+              <span class="font-bold">@made.by._ayu</span>
+            </a>
+          </div>
+
+          <div class="mt-8 flex gap-3">
+            <a href="https://instagram.com/made.by._ayu" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-12 w-12 place-items-center rounded-full border-2 border-tinta bg-white shadow-duro-sm transition-all hover:-translate-y-1 hover:rotate-6 hover:bg-turquesa-300"><i data-lucide="instagram" class="h-5 w-5"></i></a>
+            <a href="#" aria-label="Pinterest" class="grid h-12 w-12 place-items-center rounded-full border-2 border-tinta bg-white shadow-duro-sm transition-all hover:-translate-y-1 hover:-rotate-6 hover:bg-turquesa-200"><i data-lucide="pin" class="h-5 w-5"></i></a>
+          </div>
+        </div>
+
+        <!-- Formulário como folha de caderno -->
+        <form id="formContato" novalidate class="relative rotate-1 border-2 border-tinta bg-white p-6 shadow-duro-lg sm:p-8">
+          <span class="fita -top-3 left-8 -rotate-6"></span>
+          <span class="fita tq -top-3 right-8 rotate-6"></span>
+
+          <div id="camposForm" class="grid gap-5">
+            <div>
+              <label for="nome" class="font-display text-sm font-bold uppercase tracking-wide">Nome</label>
+              <input id="nome" type="text" required placeholder="Seu nome"
+                class="mt-2 w-full rounded-lg border-2 border-tinta bg-creme-50 px-4 py-3 outline-none transition focus:bg-white focus:shadow-duro-tq" />
+            </div>
+            <div>
+              <label for="email" class="font-display text-sm font-bold uppercase tracking-wide">E-mail</label>
+              <input id="email" type="email" required placeholder="voce@email.com"
+                class="mt-2 w-full rounded-lg border-2 border-tinta bg-creme-50 px-4 py-3 outline-none transition focus:bg-white focus:shadow-duro-tq" />
+            </div>
+            <fieldset>
+              <legend class="font-display text-sm font-bold uppercase tracking-wide">O que você precisa?</legend>
+              <div id="opcoesServico" class="mt-2 flex flex-wrap gap-2"></div>
+            </fieldset>
+            <div>
+              <label for="mensagem" class="font-display text-sm font-bold uppercase tracking-wide">Mensagem</label>
+              <textarea id="mensagem" rows="4" required placeholder="Conte sobre seu projeto..."
+                class="mt-2 w-full resize-none rounded-lg border-2 border-tinta bg-creme-50 px-4 py-3 outline-none transition focus:bg-white focus:shadow-duro-tq"></textarea>
+            </div>
+            <p id="erroForm" class="hidden font-bold text-red-700" role="alert"></p>
+            <button type="submit" class="group inline-flex items-center justify-center gap-2 rounded-xl border-2 border-tinta bg-turquesa-400 px-7 py-3.5 font-display font-bold shadow-duro transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-duro-lg active:translate-x-1 active:translate-y-1 active:shadow-none">
+              Enviar mensagem <i data-lucide="send" class="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-rotate-12"></i>
+            </button>
+          </div>
+
+          <div id="sucessoForm" class="hidden py-10 text-center">
+            <svg class="mx-auto h-16 w-16 animate-spin fill-turquesa-500 [animation-duration:3s]"><use href="#estrela"/></svg>
+            <h3 class="mt-4 font-display text-3xl font-extrabold">Mensagem enviada!</h3>
+            <p class="mt-2 font-mao text-2xl text-turquesa-700">obrigada pelo carinho, já já te respondo ♡</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rasgado-cima bg-tinta pb-8 pt-12 text-sm text-creme-100">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6">
+      <p class="flex items-center gap-3">
+        <img src="assets/images/logo-made-by-ayu.png" alt="" class="h-10 w-10" width="40" height="40" />
+        <span>© <span id="ano"></span> Made by Ayu — feito com cola, tesoura e código.</span>
+      </p>
+      <a href="https://instagram.com/made.by._ayu" target="_blank" rel="noopener" class="inline-flex items-center gap-2 opacity-75 transition hover:text-turquesa-300 hover:opacity-100">
+        <i data-lucide="instagram" class="h-4 w-4"></i> @made.by._ayu
+      </a>
+    </div>
+  </footer>
+
+  <!-- Voltar ao topo -->
+  <a href="#inicio" id="btnTopo" aria-label="Voltar ao topo"
+     class="fixed bottom-5 right-5 z-40 grid h-12 w-12 translate-y-24 place-items-center rounded-full border-2 border-tinta bg-creme-300 opacity-0 shadow-duro-sm transition-all duration-300 hover:-translate-y-1 hover:bg-turquesa-300">
+    <i data-lucide="arrow-up" class="h-5 w-5"></i>
+  </a>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="assets/js/icones.js"></script>
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+</html>
