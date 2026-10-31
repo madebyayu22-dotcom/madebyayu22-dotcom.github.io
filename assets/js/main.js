@@ -694,7 +694,7 @@ $('#formContato').addEventListener('submit', (e) => {
   const botao = $('#formContato button[type="submit"]');
   botao.disabled = true;
   botao.style.opacity = '.6';
-  fetch('https://formsubmit.co/ajax/ayuhunas@gmail.com', {
+  fetch('https://formsubmit.co/ajax/madebyayu22@gmail.com', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
