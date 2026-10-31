@@ -373,10 +373,6 @@
             </a>
           </div>
 
-          <a href="briefing.html" class="mt-8 inline-flex rotate-1 items-center gap-2 border-2 border-tinta bg-creme-300 px-4 py-2 font-mao text-2xl shadow-duro-sm transition-all hover:rotate-0 hover:shadow-duro">
-            ↳ quer um orçamento certeiro? preencha o briefing completo
-          </a>
-
           <div class="mt-8 flex gap-3">
             <a href="https://instagram.com/made.by._ayu" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-12 w-12 place-items-center rounded-full border-2 border-tinta bg-white shadow-duro-sm transition-all hover:-translate-y-1 hover:rotate-6 hover:bg-turquesa-300"><i data-lucide="instagram" class="h-5 w-5"></i></a>
             <a href="https://wa.me/819063301274" target="_blank" rel="noopener" aria-label="WhatsApp" class="grid h-12 w-12 place-items-center rounded-full border-2 border-tinta bg-white shadow-duro-sm transition-all hover:-translate-y-1 hover:rotate-6 hover:bg-turquesa-200"><i data-lucide="message-circle" class="h-5 w-5"></i></a>
@@ -384,43 +380,28 @@
           </div>
         </div>
 
-        <!-- Formulário como folha de caderno -->
-        <form id="formContato" novalidate class="relative rotate-1 border-2 border-tinta bg-white p-6 shadow-duro-lg sm:p-8">
-          <span class="fita -top-3 left-8 -rotate-6"></span>
-          <span class="fita tq -top-3 right-8 rotate-6"></span>
+        <!-- Convite para o briefing completo -->
+        <a href="briefing.html" class="cta-briefing group" aria-label="Vamos criar a sua marca? Preencher o briefing completo">
+          <span class="washi washi-amarela cta-washi" aria-hidden="true"></span>
+          <span class="washi washi-turquesa cta-washi-2" aria-hidden="true"></span>
+          <span class="cta-recado" aria-hidden="true">começa aqui ↓</span>
 
-          <div id="camposForm" class="grid gap-5">
-            <div>
-              <label for="nome" class="font-display text-sm font-bold uppercase tracking-wide">Nome</label>
-              <input id="nome" type="text" required placeholder="Seu nome"
-                class="mt-2 w-full rounded-lg border-2 border-tinta bg-creme-50 px-4 py-3 outline-none transition focus:bg-white focus:shadow-duro-tq" />
-            </div>
-            <div>
-              <label for="email" class="font-display text-sm font-bold uppercase tracking-wide">E-mail</label>
-              <input id="email" type="email" required placeholder="voce@email.com"
-                class="mt-2 w-full rounded-lg border-2 border-tinta bg-creme-50 px-4 py-3 outline-none transition focus:bg-white focus:shadow-duro-tq" />
-            </div>
-            <fieldset>
-              <legend class="font-display text-sm font-bold uppercase tracking-wide">O que você precisa?</legend>
-              <div id="opcoesServico" class="mt-2 flex flex-wrap gap-2"></div>
-            </fieldset>
-            <div>
-              <label for="mensagem" class="font-display text-sm font-bold uppercase tracking-wide">Mensagem</label>
-              <textarea id="mensagem" rows="4" required placeholder="Conte sobre seu projeto..."
-                class="mt-2 w-full resize-none rounded-lg border-2 border-tinta bg-creme-50 px-4 py-3 outline-none transition focus:bg-white focus:shadow-duro-tq"></textarea>
-            </div>
-            <p id="erroForm" class="hidden font-bold text-red-700" role="alert"></p>
-            <button type="submit" class="group inline-flex items-center justify-center gap-2 rounded-xl border-2 border-tinta bg-turquesa-400 px-7 py-3.5 font-display font-bold shadow-duro transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-duro-lg active:translate-x-1 active:translate-y-1 active:shadow-none">
-              Enviar mensagem <i data-lucide="send" class="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-rotate-12"></i>
-            </button>
-          </div>
+          <span class="cta-etiqueta">✎ briefing completo</span>
+          <span class="cta-titulo">Vamos criar a <span class="cta-destaque">sua marca</span>?</span>
+          <span class="cta-texto">Responda o meu briefing: são algumas perguntinhas sobre o seu negócio, o seu estilo e o que você sonha para a sua marca. Com elas eu já chego na nossa reunião entendendo você ♡</span>
 
-          <div id="sucessoForm" class="hidden py-10 text-center">
-            <svg class="mx-auto h-16 w-16 animate-spin fill-turquesa-500 [animation-duration:3s]"><use href="#estrela"/></svg>
-            <h3 class="mt-4 font-display text-3xl font-extrabold">Mensagem enviada!</h3>
-            <p class="mt-2 font-mao text-2xl text-turquesa-700">obrigada pelo carinho, já já te respondo ♡</p>
-          </div>
-        </form>
+          <span class="cta-lista">
+            <span><b>⏱</b> leva de 8 a 10 minutos</span>
+            <span><b>✦</b> sem resposta certa ou errada</span>
+            <span><b>☕</b> depois marcamos uma reunião online</span>
+          </span>
+
+          <span class="cta-botao">
+            Preencher o briefing
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+          <svg class="cta-estrela" aria-hidden="true"><use href="#estrela"/></svg>
+        </a>
       </div>
     </section>
   </main>
