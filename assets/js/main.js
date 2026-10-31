@@ -119,7 +119,7 @@ const projetos = [
     titulo: 'Stickers: Caramelo, Frajola & cia.',
     desc: 'Cartela de adesivos redondos com cães e gatos ilustrados nas cores da marca.',
     tags: ['Stickers', 'Ilustração', 'Brinde'], icone: 'paw-print', fundo: 'bg-jana' },
-  { cat: 'jana', carrossel: true, prancha: true, aspecto: 'aspect-[4/5]', pasta: 'aplicacoes', total: 4,
+  { cat: 'jana', carrossel: true, prancha: true, aspecto: 'aspect-[4/5]', pasta: 'aplicacoes', total: 3, inicio: 2,
     cliente: 'Cartão de visitas & ímãs de geladeira', rotuloCard: 'Aplicações · papelaria',
     bastidor: 'O ímã tem o formato do telhado do logo, com borda pontilhada de costura e um bichinho diferente em cada um. Na geladeira do tutor, ele fica à mão justamente na hora do “e agora, quem eu chamo?”: o QR code leva direto para a Dra. Janaína. O cartão segue a mesma ideia: frente verde com o logo, verso creme com CRMV, Instagram e QR code.',
     titulo: 'Cartão de visitas e ímãs de geladeira',
@@ -400,7 +400,7 @@ const perfis = {
 };
 
 const slidesDe = (p) => Array.from({ length: p.total }, (_, k) =>
-  `${PASTA}/${pastaCategoria[p.cat]}/${p.pasta}/${String(k + 1).padStart(2, '0')}.jpg`);
+  `${PASTA}/${pastaCategoria[p.cat]}/${p.pasta}/${String(k + (p.inicio || 1)).padStart(2, '0')}.jpg`);
 
 /* Trilho deslizante (arrastar no celular, setas no computador) */
 function carrosselHTML(p, dica = false) {
